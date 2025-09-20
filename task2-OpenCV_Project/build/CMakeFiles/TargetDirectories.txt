@@ -1,3 +1,0 @@
-/home/ubuntu/桌面/rm_train/OpenCV_Project/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/桌面/rm_train/OpenCV_Project/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/桌面/rm_train/OpenCV_Project/build/CMakeFiles/OpenCV_Project.dir
