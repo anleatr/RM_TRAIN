@@ -10,4 +10,4 @@
 
 # task3
 ./task3-ceres/build
-./task3-ceres/*
+./task3-ceres/resources/*

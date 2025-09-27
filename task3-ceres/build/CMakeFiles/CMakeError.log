@@ -1,0 +1,55 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_67a46/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_67a46.dir/build.make CMakeFiles/cmTC_67a46.dir/build
+gmake[1]: 进入目录“/home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_67a46.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_67a46.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_67a46
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67a46.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ CMakeFiles/cmTC_67a46.dir/CheckFunctionExists.c.o -o cmTC_67a46 
+/usr/bin/ld: CMakeFiles/cmTC_67a46.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_67a46.dir/build.make:99：cmTC_67a46] 错误 1
+gmake[1]: 离开目录“/home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp”
+gmake: *** [Makefile:127：cmTC_67a46/fast] 错误 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_302ab/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_302ab.dir/build.make CMakeFiles/cmTC_302ab.dir/build
+gmake[1]: 进入目录“/home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_302ab.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_302ab.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_302ab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_302ab.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_302ab.dir/CheckFunctionExists.c.o -o cmTC_302ab  /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_302ab.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_302ab.dir/build.make:102：cmTC_302ab] 错误 1
+gmake[1]: 离开目录“/home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp”
+gmake: *** [Makefile:127：cmTC_302ab/fast] 错误 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fe248/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fe248.dir/build.make CMakeFiles/cmTC_fe248.dir/build
+gmake[1]: 进入目录“/home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_fe248.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_fe248.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fe248
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe248.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_fe248.dir/CheckFunctionExists.c.o -o cmTC_fe248  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -fortranlibs 
+cc: error: unrecognized command-line option ‘-fortranlibs’
+gmake[1]: *** [CMakeFiles/cmTC_fe248.dir/build.make:103：cmTC_fe248] 错误 1
+gmake[1]: 离开目录“/home/wtz/桌面/RM_TRAIN/task3-ceres/build/CMakeFiles/CMakeTmp”
+gmake: *** [Makefile:127：cmTC_fe248/fast] 错误 2
+
+
+
