@@ -1,3 +1,5 @@
+.vscode
+
 # task1
 ./task1-Ubuntu_config/build
 
@@ -5,3 +7,7 @@
 ./task2-OpenCV_Project/build
 ./task2-OpenCV_Project/.idea
 ./task2-OpenCV_Project/.vscode
+
+# task3
+./task3-ceres/build
+./task3-ceres/*
