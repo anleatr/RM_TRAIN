@@ -49,11 +49,23 @@ source ~/.bashrc
 
 ### 编译
 创建ros2工作空间
+
 `
-mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
+mkdir -p ~/ros2_ws/src 
 `
 
 克隆代码
 
+`git clone https://github.com/anleatr/RM_TRAIN.git`
+
+`cd EM_TRAIN && mv task4-hik_camera ~/ros2_ws/src`
+
 编译
-`colcon build`
+
+`cd ~/ros2_ws/src && colcon build`
+
+使用
+```
+souce install/setup.bash
+ros2 launch hik_camera hik_rviz.launch.py
+```

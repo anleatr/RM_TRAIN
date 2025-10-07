@@ -216,9 +216,9 @@ private:
     void WorkThread()
     {
         int nRet = MV_OK;
-        MV_FRAME_OUT stImageInfo = {0}; //图像信息结构体，图像数据在stImageInfo.pBufAddr
+        MV_FRAME_OUT stImageInfo = {}; //图像信息结构体，图像数据在stImageInfo.pBufAddr {0}
         memset(&stImageInfo, 0, sizeof(MV_FRAME_OUT));
-        MVCC_FLOATVALUE stParam = {0};
+        MVCC_FLOATVALUE stParam = {}; // 写成{0} warning
         while (!g_bExit && !reconnecting)
         {   nRet = MV_CC_GetFloatValue(handle, "ResultingFrameRate", &stParam);
             nRet = MV_CC_GetImageBuffer(handle, &stImageInfo, 1000); //最多阻塞1000ms           
@@ -344,7 +344,7 @@ private:
     int nRet;
     void* handle; // 句柄
     unsigned int nSelectNum = 0;
-    MV_CC_DEVICE_INFO_LIST stDeviceList = {0};
+    MV_CC_DEVICE_INFO_LIST stDeviceList = {};
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr image_pub_;
     std::thread work_thread_;
     enum class PixFmt : int {
@@ -376,9 +376,9 @@ void __stdcall ImageCallbackEx2(MV_FRAME_OUT* pstFrame, void *pUser, bool bAutoF
     HikCameraNode* node = static_cast<HikCameraNode*>(pUser);
     if (pstFrame)
     {
-        int nRet;
-        MVCC_FLOATVALUE stParam = {0};
-        nRet = MV_CC_GetFloatValue(node->handle, "ResultingFrameRate", &stParam);
+
+        MVCC_FLOATVALUE stParam = {}; // 同理
+        node->nRet = MV_CC_GetFloatValue(node->handle, "ResultingFrameRate", &stParam);
 
         printf("connected, GetOneFrame, Width[%d], Height[%d], nFrameNum[%d], Real-time FPS = %.2f \n\n", 
             pstFrame->stFrameInfo.nExtendWidth, pstFrame->stFrameInfo.nExtendHeight, pstFrame->stFrameInfo.nFrameNum, static_cast<double>(stParam.fCurValue));
@@ -457,7 +457,7 @@ void __stdcall ReconnectDevice(unsigned int nMsgType, void* pUser)
             nRet = MV_CC_DestroyHandle(node->handle);
             node->handle = NULL;
                 
-            MV_CC_DEVICE_INFO_LIST stDevTempList = { 0 };
+            MV_CC_DEVICE_INFO_LIST stDevTempList = { };// 同理
             memset(&stDevTempList, 0, sizeof(MV_CC_DEVICE_INFO_LIST));
             
             unsigned int nIndex = -1;
